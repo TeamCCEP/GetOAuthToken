@@ -10,13 +10,13 @@ Everything included is for demo and Proof of Concept purposes only. Use of the s
 Please contact the CCEP team at [ccep@cisco.com](mailto:ccep@cisco.com?subject=payment-collections-demo) for questions.
 
 ### Solution Goals
-A simple Webex Connect flow that you can call from other flows. It will provide an OAuth token to the parent flow in the custom variable "JDSToken".  It will provide the bearer token either from a token management service, or from a static token you provide.
+A Webex Connect flow that will provide an OAuth token to a parent flow in the custom variable "JDSToken".  It will provide the bearer token either from a token management service, or from a static token you provide. This flow converges any token changes into a single point, simplifying administration.
 
-The advantage of this flow is that it allows you to just call it from any other flow without any real details, and use the provided OAuth token in any number of other flows.  If you specify the token in each flow, any changes need to be performed across each flow individually.
+The advantage of this flow is that it allows you to just call it from any other flow without any real details, and use the provided OAuth token in any number of other flows.  If you specify the token in each flow, any changes need to be performed across each flow individually, once for each flow using the token.
 
 ![](Images/GetOAuthToken-static.jpg)
 
-This flow converges any token changes or troubleshooting that need to happen into a single flow.
+This flow converges any token changes or troubleshooting that need to happen into a single flow, allowing one change to the OAuth flow to affect multiple other flows.
 
 ![](Images/GetOAuthToken.jpg)
 
